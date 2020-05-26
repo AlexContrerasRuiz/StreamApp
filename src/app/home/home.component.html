@@ -1,0 +1,32 @@
+<div class="container">
+  <h1 class="title">
+    {{ 'PAGES.HOME.TITLE' | translate }}
+  </h1>
+  <vg-player>
+    <vg-controls>
+        <vg-play-pause></vg-play-pause>
+        <!-- <!-- <vg-playback-button></vg-playback-button> --> -->
+  
+        <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+  
+        <vg-scrub-bar>
+            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+            <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+            <div style="position: absolute; background-color: rgb(92, 92, 92); width: 100%; height: 3px;">
+            </div>
+        </vg-scrub-bar>
+  
+        <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+  
+        <vg-mute></vg-mute>
+        <vg-volume></vg-volume>
+  
+        <vg-fullscreen></vg-fullscreen>
+    </vg-controls>
+  
+    <video #media [vgMedia]="media" id="singleVideo" preload="auto" crossorigin>
+        <source src="https://firebasestorage.googleapis.com/v0/b/egoapp-57731.appspot.com/o/SMJ%2F01_Saber%20Marionette%20J.mp4?alt=media&token=04de413a-0a65-45ef-8fa5-cf436a1392f6" type="video/mp4">
+    </video>
+ </vg-player>
+  <a routerLink="/detail">{{ 'PAGES.HOME.GO_TO_DETAIL' | translate }}</a>
+</div>

@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <div id="playerContainer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/indigo-player@1/lib/indigo-player.js"></script>
+    <script>
+      const config = {
+        sources: [
+          {
+            type: 'mp4',
+            src: 'https://firebasestorage.googleapis.com/v0/b/egoapp-57731.appspot.com/o/Bunny%2Ffrag_bunny.mp4?alt=media&token=325014cb-9c44-4c02-bcd1-0019db2058bd',
+          }
+        ],
+      };
+
+      const element = document.getElementById('playerContainer');
+      debugger;
+      const player = IndigoPlayer.init(element, config);
+
+      // You can use the player object now to access the player and it's methods (play, pause, ...)
+    </script>
+  </body>
+</html>
